@@ -40,7 +40,7 @@ export default function RootLayout({
           fill={true}
         />
         <div className=" min-h-[100vh]  max-w-[1440px] mx-auto relative">
-          <header className="py-10 relative ">
+          <header className="lg:py-10 relative ">
             <Navbar />
           </header>
           {children}
