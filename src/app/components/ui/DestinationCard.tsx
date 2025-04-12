@@ -21,7 +21,7 @@ const DestinationCard = (props: Props) => {
       <p className="text-base text-slate-300 xl:text-lg">{props.content}</p>
 
       <div className="my-10 h-[1px] w-full bg-slate-300"></div>
-      <footer className="flex gap-6">
+      <footer className="flex flex-col gap-6 text-center md:flex-row xl:text-left">
         <figure className="flex-1">
           <figcaption className="text-sm text-slate-300 uppercase">
             AVG. distance
@@ -33,8 +33,7 @@ const DestinationCard = (props: Props) => {
             est. travel time
           </figcaption>
           <p className="text-[28px] uppercase">
-            {props.travelTime.length}
-            {props.travelTime.unit}
+            {props.travelTime.length} {props.travelTime.unit}
           </p>
         </figure>
       </footer>

@@ -24,9 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const path = usePathname();
-  console.log(path);
   const pathname = path === "/" ? "home" : path.split("/")[1];
-  console.log(pathname);
 
   return (
     <html lang="en">

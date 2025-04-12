@@ -56,25 +56,29 @@ const PageLayout = ({
   console.log(currentName);
 
   return (
-    <section className="mx-[165px] mt-12">
+    <section className="mx-6 mt-12 md:mx-10 xl:mx-[165px]">
       <header>
-        <h1 className="text-base uppercase md:text-xl xl:text-[28px]">
-          <span>01</span> Pick your destination
+        <h1 className="flex justify-center gap-6 text-center text-base uppercase md:justify-start md:text-left md:text-xl xl:text-[28px]">
+          <span className="font-bold text-white/50">01</span> Pick your
+          destination
         </h1>
       </header>
 
-      <div className="flex-start my-38 flex justify-between gap-8">
-        <Image
-          className="flex-1"
-          src={`/assets/destination/image-${currentName}.webp`}
-          height={480}
-          width={480}
-          alt={currentName}
-        />
+      <div className="flex-start my-12.5 flex flex-col items-center justify-between gap-x-8 gap-y-15 text-center md:mx-22 md:my-16.5 md:gap-y-18 xl:mx-0 xl:my-38 xl:flex-row xl:items-start xl:text-left">
+        <div className="flex flex-1 items-center justify-center">
+          <Image
+            className="h-[150px] w-[150px] md:h-[300px] md:w-[300px] xl:h-[480px] xl:w-[480px]"
+            src={`/assets/destination/image-${currentName}.webp`}
+            height={480}
+            width={480}
+            alt={currentName}
+            fill={false}
+          />
+        </div>
 
         <div className="flex-1">
           <div className="px-[47px]">
-            <ul className="mb-10 flex gap-8">
+            <ul className="mb-6 flex justify-center gap-8 xl:mb-10 xl:justify-start">
               {destinationData.map((dest, index) => {
                 return (
                   <li
@@ -88,7 +92,7 @@ const PageLayout = ({
                       {dest.title}
                     </Link>
                     <div
-                      className={`absolute right-0 bottom-0 h-full w-1 scale-0 bg-white duration-300 group-hover:scale-100 md:h-1 md:w-full ${
+                      className={`absolute right-0 bottom-0 h-1 w-full scale-0 bg-white duration-300 group-hover:scale-100 ${
                         path.includes(dest.title.toLowerCase())
                           ? "scale-100"
                           : "scale-0"
