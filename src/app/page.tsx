@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Space Tourism | Home",
@@ -9,14 +8,15 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* <div className="w-full h-full relative"> */}
-      <section className="absolute bottom-32 left-0 flex items-center mx-[165px] justify-between">
-        <div className="w-1/2">
-          <h1 className={`text-[144px] font-title`}>
-            <span className="block text-[28px] font-main text-slate-300">
+      <section className="bottom-32 left-0 mx-6 mt-6 flex flex-col items-center justify-between gap-y-30 text-center md:mx-[128px] md:mt-[128px] md:gap-y-16 xl:absolute xl:mx-[165px] xl:flex-row xl:text-left">
+        <div className="max-w-[512px] xl:w-1/2 xl:max-w-none">
+          <h1>
+            <span className="font-main block text-base tracking-widest text-slate-300 md:text-[28px]">
               SO, YOU WANT TO TRAVEL TO
-            </span>{" "}
-            SPACE
+            </span>
+            <span className="font-title block text-[80px] md:text-[144px]">
+              SPACE
+            </span>
           </h1>
           <p className="text-lg">
             Let’s face it; if you want to go to space, you might as well
@@ -25,11 +25,10 @@ export default function Home() {
             world experience!
           </p>
         </div>
-        <button className="w-59 h-59 bg-white rounded-full text-slate-900 uppercase text-[32px] font-title">
+        <button className="font-title h-36 w-36 rounded-full bg-white text-lg tracking-widest text-slate-900 uppercase md:h-59 md:w-59 md:text-[32px]">
           Explore
         </button>
       </section>
-      {/* </div> */}
     </>
   );
 }

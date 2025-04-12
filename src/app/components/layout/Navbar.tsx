@@ -15,15 +15,15 @@ const Navbar = () => {
 
   const path = usePathname();
   return (
-    <nav className="flex items-center justify-between pl-4 md:pl-10 lg:pl-16 h-24 z-50 relative">
+    <nav className="relative z-50 flex h-24 items-center justify-between pl-4 md:pl-10 lg:pl-16">
       <Image
-        className="h-10 w-10 md:w-12 md:h-12"
+        className="h-10 w-10 md:h-12 md:w-12"
         src={"/assets/shared/logo.svg"}
         height={48}
         width={48}
         alt="Space toursim home"
       />
-      <div className="h-[1px] w-[calc((560_/_1440)_*_100vw)] bg-white absolute top-1/2 left-44 max-w-[560px] scale-0 xl:scale-100"></div>
+      <div className="absolute top-1/2 left-44 z-50 h-[1px] w-[calc((560_/_1440)_*_100vw)] max-w-[560px] scale-0 bg-white xl:scale-100"></div>
 
       <div className="md:hidden">
         <button
@@ -44,23 +44,23 @@ const Navbar = () => {
       </div>
 
       <ul
-        className={`pl-8 pt-34 md:pt-0 absolute top-0 right-0 md:relative flex flex-col w-64 md:w-auto h-[100vh] md:flex-row gap-y-8 gap-x-12 uppercase bg-white/30 md:h-full md:items-center md:pr-10 lg:pr-16 md:pl-29 lg:pl-40 -z-10 md:z-auto md:scale-100 ${
+        className={`absolute top-0 right-0 -z-10 flex h-[100vh] w-64 flex-col gap-x-12 gap-y-8 bg-white/10 pt-34 pl-8 uppercase backdrop-blur-2xl md:relative md:z-auto md:h-full md:w-auto md:scale-100 md:flex-row md:items-center md:pt-0 md:pr-10 md:pl-29 lg:pr-16 lg:pl-40 ${
           isMenuOpen ? "scale-x-100" : "scale-x-0"
-        } duration-300 origin-right`}
+        } origin-right duration-300`}
       >
         {navLinks.map((link, index) => {
           return (
             <li
               key={`navlink-${index}`}
-              className={`flex items-center relative md:h-full`}
+              className={`relative flex items-center md:h-full`}
             >
               <Link
                 href={link.to}
-                className="h-full flex items-center group tracking-[2px] "
+                className="group flex h-full items-center tracking-[2px]"
               >
-                <span className="font-bold mr-3">0{index}</span> {link.title}
+                <span className="mr-3 font-bold">0{index}</span> {link.title}
                 <div
-                  className={`absolute bottom-0 right-0 md:w-full h-full w-1 bg-white md:h-1 scale-0 group-hover:scale-100 duration-300 ${
+                  className={`absolute right-0 bottom-0 h-full w-1 scale-0 bg-white duration-300 group-hover:scale-100 md:h-1 md:w-full ${
                     path === link.to ? "scale-100" : "scale-0"
                   }`}
                 ></div>
