@@ -43,7 +43,7 @@ export default function RootLayout({
           <header className="relative lg:py-10">
             <Navbar />
           </header>
-          {children}
+          <main>{children}</main>
         </div>
       </body>
     </html>

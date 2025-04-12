@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navLinks = [
     { title: "Home", to: "/" },
-    { title: "Destination", to: "/destination" },
+    { title: "Destination", to: "/destination/moon" },
     { title: "Crew", to: "/crew" },
     { title: "Technology", to: "/technology" },
   ];
@@ -61,7 +61,9 @@ const Navbar = () => {
                 <span className="mr-3 font-bold">0{index}</span> {link.title}
                 <div
                   className={`absolute right-0 bottom-0 h-full w-1 scale-0 bg-white duration-300 group-hover:scale-100 md:h-1 md:w-full ${
-                    path === link.to ? "scale-100" : "scale-0"
+                    path.includes(link.title.toLowerCase())
+                      ? "scale-100"
+                      : "scale-0"
                   }`}
                 ></div>
               </Link>
