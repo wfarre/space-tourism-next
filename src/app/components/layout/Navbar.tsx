@@ -10,10 +10,12 @@ const Navbar = () => {
     { title: "Home", to: "/" },
     { title: "Destination", to: "/destination/moon" },
     { title: "Crew", to: "/crew/specialist" },
-    { title: "Technology", to: "/technology" },
+    { title: "Technology", to: "/technology/vehicle" },
   ];
 
   const path = usePathname();
+  console.log(path);
+
   return (
     <nav className="relative z-50 flex h-24 items-center justify-between pl-4 md:pl-10 lg:pl-16">
       <Image
@@ -61,7 +63,8 @@ const Navbar = () => {
                 <span className="mr-3 font-bold">0{index}</span> {link.title}
                 <div
                   className={`absolute right-0 bottom-0 h-full w-1 scale-0 bg-white duration-300 group-hover:scale-100 md:h-1 md:w-full ${
-                    path.includes(link.title.toLowerCase())
+                    (path === "/" && path === link.to) ||
+                    (path !== "/" && path.includes(link.title.toLowerCase()))
                       ? "scale-100"
                       : "scale-0"
                   }`}

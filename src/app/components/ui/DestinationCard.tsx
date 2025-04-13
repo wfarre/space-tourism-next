@@ -1,4 +1,5 @@
 import React from "react";
+import DescriptionCard from "./DescriptionCard";
 
 interface Props {
   title: string;
@@ -12,14 +13,7 @@ interface Props {
 
 const DestinationCard = (props: Props) => {
   return (
-    <article>
-      <header className="mb-4">
-        <h2 className="font-title text-[56px] uppercase md:text-[80px] xl:text-8xl">
-          {props.title}
-        </h2>
-      </header>
-      <p className="text-base text-slate-300 xl:text-lg">{props.content}</p>
-
+    <DescriptionCard title={props.title} desc={props.content}>
       <div className="my-10 h-[1px] w-full bg-slate-300"></div>
       <footer className="flex flex-col gap-6 text-center md:flex-row xl:text-left">
         <figure className="flex-1">
@@ -37,7 +31,7 @@ const DestinationCard = (props: Props) => {
           </p>
         </figure>
       </footer>
-    </article>
+    </DescriptionCard>
   );
 };
 

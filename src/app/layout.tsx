@@ -32,8 +32,20 @@ export default function RootLayout({
         className={`${barlowCondensed.className} ${bellefair.variable} ${barlowCondensed.variable} relative bg-slate-950 text-white antialiased`}
       >
         <Image
-          className="absolute top-0 left-0 -z-10 h-full w-full"
+          className="absolute top-0 left-0 -z-10 hidden h-full w-full xl:block"
           src={`/assets/${pathname}/background-${pathname}-desktop.jpg`}
+          alt=""
+          fill={true}
+        />
+        <Image
+          className="absolute top-0 left-0 -z-10 hidden h-full w-full md:block xl:hidden"
+          src={`/assets/${pathname}/background-${pathname}-tablet.jpg`}
+          alt=""
+          fill={true}
+        />
+        <Image
+          className="absolute top-0 left-0 -z-10 h-full w-full md:hidden"
+          src={`/assets/${pathname}/background-${pathname}-mobile.jpg`}
           alt=""
           fill={true}
         />
@@ -41,7 +53,9 @@ export default function RootLayout({
           <header className="relative lg:py-10">
             <Navbar />
           </header>
-          <main className="mx-6 mt-6 md:mx-10 xl:mx-[165px] xl:mt-12">
+          <main
+            className={`${!path.includes("technology") ? "mx-6 md:mx-10 xl:mx-[165px]" : "mr-0 xl:ml-[165px]"} mt-6 xl:mt-12`}
+          >
             {children}
           </main>
         </div>
