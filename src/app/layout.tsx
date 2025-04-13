@@ -41,7 +41,9 @@ export default function RootLayout({
           <header className="relative lg:py-10">
             <Navbar />
           </header>
-          <main>{children}</main>
+          <main className="mx-6 mt-6 md:mx-10 xl:mx-[165px] xl:mt-12">
+            {children}
+          </main>
         </div>
       </body>
     </html>

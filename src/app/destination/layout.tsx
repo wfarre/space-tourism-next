@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import PageHeader from "../components/layout/PageHeader";
 const destinationData = [
   {
     title: "moon",
@@ -56,14 +57,8 @@ const PageLayout = ({
   console.log(currentName);
 
   return (
-    <section className="mx-6 mt-12 md:mx-10 xl:mx-[165px]">
-      <header>
-        <h1 className="flex justify-center gap-6 text-center text-base uppercase md:justify-start md:text-left md:text-xl xl:text-[28px]">
-          <span className="font-bold text-white/50">01</span> Pick your
-          destination
-        </h1>
-      </header>
-
+    <section className="">
+      <PageHeader index={"01"} title={"Destination"} />
       <div className="flex-start my-12.5 flex flex-col items-center justify-between gap-x-8 gap-y-15 text-center md:mx-22 md:my-16.5 md:gap-y-18 xl:mx-0 xl:my-38 xl:flex-row xl:items-start xl:text-left">
         <div className="flex flex-1 items-center justify-center">
           <Image
