@@ -1,5 +1,5 @@
 import React from "react";
-import DescriptionCard from "./DescriptionCard";
+import CardDescription from "./CardDescription";
 
 interface Props {
   title: string;
@@ -11,9 +11,9 @@ interface Props {
   };
 }
 
-const DestinationCard = (props: Props) => {
+const CardDestination = (props: Props) => {
   return (
-    <DescriptionCard title={props.title} desc={props.content}>
+    <CardDescription title={props.title} desc={props.content}>
       <div className="my-10 h-[1px] w-full bg-slate-300"></div>
       <footer className="flex flex-col gap-6 text-center md:flex-row xl:text-left">
         <figure className="flex-1">
@@ -31,8 +31,8 @@ const DestinationCard = (props: Props) => {
           </p>
         </figure>
       </footer>
-    </DescriptionCard>
+    </CardDescription>
   );
 };
 
-export default DestinationCard;
+export default CardDestination;

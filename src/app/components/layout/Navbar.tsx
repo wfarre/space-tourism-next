@@ -14,7 +14,6 @@ const Navbar = () => {
   ];
 
   const path = usePathname();
-  console.log(path);
 
   return (
     <nav className="relative z-50 flex h-24 items-center justify-between pl-4 md:pl-10 lg:pl-16">

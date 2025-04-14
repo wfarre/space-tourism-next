@@ -7,7 +7,7 @@ interface Props {
   children?: React.ReactNode;
 }
 
-const DescriptionCard = (props: Props) => {
+const CardDescription = (props: Props) => {
   return (
     <article className="text-center xl:text-left">
       <header className="mb-6">
@@ -24,4 +24,4 @@ const DescriptionCard = (props: Props) => {
   );
 };
 
-export default DescriptionCard;
+export default CardDescription;

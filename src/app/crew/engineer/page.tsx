@@ -1,4 +1,4 @@
-import CrewCard from "@/app/components/ui/CrewCard";
+import CardCrew from "@/app/components/ui/CardCrew";
 import React from "react";
 
 const page = () => {
@@ -9,7 +9,7 @@ const page = () => {
     img: "/assets/crew/image-anousheh-ansari.webp",
   };
   return (
-    <CrewCard
+    <CardCrew
       title={crew.title}
       name={crew.name}
       desc={crew.desc}

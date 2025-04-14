@@ -1,4 +1,4 @@
-import DestinationCard from "@/app/components/ui/DestinationCard";
+import CardDestination from "@/app/components/ui/CardDestination";
 import React from "react";
 
 const page = () => {
@@ -13,7 +13,7 @@ const page = () => {
     },
   };
   return (
-    <DestinationCard
+    <CardDestination
       title={planet.title}
       content={planet.content}
       travelTime={planet.travelTime}

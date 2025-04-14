@@ -1,4 +1,4 @@
-import CrewCard from "@/app/components/ui/CrewCard";
+import CrewCard from "@/app/components/ui/CardCrew";
 import React from "react";
 
 const page = () => {
