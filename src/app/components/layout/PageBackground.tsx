@@ -9,25 +9,25 @@ const PageBackground = () => {
   return (
     <div className="-z-10">
       <Image
-        className="absolute top-0 left-0 hidden h-full w-full xl:block"
+        className="absolute top-0 left-0 hidden h-full w-full object-cover xl:block"
         src={`/assets/${pathname}/background-${pathname}-desktop.jpg`}
         alt=""
-        height={900}
         width={1440}
+        height={900}
       />
       <Image
-        className="absolute top-0 left-0 hidden h-full w-full md:block xl:hidden"
+        className="absolute top-0 left-0 hidden h-full w-full object-cover md:block xl:hidden"
         src={`/assets/${pathname}/background-${pathname}-tablet.jpg`}
         alt=""
-        height={1024}
         width={768}
+        height={1024}
       />
       <Image
-        className="absolute top-0 left-0 h-full w-full md:hidden"
+        className="absolute top-0 left-0 h-full w-full object-cover md:hidden"
         src={`/assets/${pathname}/background-${pathname}-mobile.jpg`}
         alt=""
-        height={667}
         width={375}
+        height={667}
       />
     </div>
   );
