@@ -28,10 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${barlowCondensed.className} ${bellefair.variable} ${barlowCondensed.variable} relative bg-slate-950 text-white antialiased`}
+        className={`${barlowCondensed.className} ${bellefair.variable} ${barlowCondensed.variable} relative min-h-[100vh] bg-slate-950 text-white antialiased`}
       >
         <PageBackground />
-        <div className="relative mx-auto min-h-[100vh] max-w-[1440px] text-base">
+        <div className="relative mx-auto h-full max-w-[1440px] text-base">
           <header className="relative lg:py-10">
             <Navbar />
           </header>

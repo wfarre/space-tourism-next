@@ -14,7 +14,6 @@ const PageBackground = () => {
         alt=""
         height={900}
         width={1440}
-        fill={true}
       />
       <Image
         className="absolute top-0 left-0 -z-10 hidden h-full w-full md:block xl:hidden"
@@ -22,7 +21,6 @@ const PageBackground = () => {
         alt=""
         height={1024}
         width={768}
-        fill={true}
       />
       <Image
         className="absolute top-0 left-0 -z-10 h-full w-full md:hidden"
@@ -30,7 +28,6 @@ const PageBackground = () => {
         alt=""
         height={667}
         width={375}
-        fill={true}
       />
     </>
   );
