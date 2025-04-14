@@ -1,10 +1,10 @@
-// import { Metadata } from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 
-// export const metadata: Metadata = {
-//   title: "Space Tourism | Home",
-//   description: "You want to travel to space?",
-// };
+export const metadata: Metadata = {
+  title: "Space Tourism | Home",
+  description: "You want to travel to space?",
+};
 
 export default function Home() {
   return (

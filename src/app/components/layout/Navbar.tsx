@@ -37,7 +37,7 @@ const Navbar = () => {
                 ? "/assets/shared/icon-close.svg"
                 : "/assets/shared/icon-hamburger.svg"
             }
-            height={24}
+            height={21}
             width={24}
             alt={`${isMenuOpen ? "close" : "open"} navigation`}
           />
