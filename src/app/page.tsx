@@ -28,7 +28,7 @@ export default function Home() {
         </div>
         <Link
           href={"/destination/moon"}
-          className="font-title relative flex h-36 w-36 items-center justify-center rounded-full bg-white text-lg tracking-widest text-slate-900 uppercase transition-all duration-300 before:absolute before:top-1/2 before:left-1/2 before:-z-10 before:h-80 before:w-80 before:-translate-1/2 before:scale-0 before:rounded-full before:bg-white before:opacity-0 before:duration-300 hover:before:scale-100 hover:before:opacity-20 md:h-59 md:w-59 md:text-[32px]"
+          className="font-title relative z-10 flex h-36 w-36 items-center justify-center rounded-full bg-white text-lg tracking-widest text-slate-900 uppercase transition-all duration-300 before:absolute before:top-1/2 before:left-1/2 before:-z-[5] before:h-80 before:w-80 before:-translate-1/2 before:scale-0 before:rounded-full before:bg-white before:opacity-0 before:duration-300 hover:before:scale-100 hover:before:opacity-20 md:h-59 md:w-59 md:text-[32px]"
         >
           Explore
         </Link>
