@@ -13,9 +13,10 @@ const NavCrew = () => {
           <li key={`crew-link-${index}`}>
             <Link href={`/crew/${link}`}>
               <div
-                className={`h-2.5 w-2.5 rounded-full xl:h-4 xl:w-4 ${path.includes(link) ? "bg-white" : "bg-white/50"}`}
+                className={`relative h-2.5 w-2.5 rounded-full xl:h-4 xl:w-4 ${path.includes(link) ? "bg-white" : "bg-white/50"} duration-300 hover:bg-white`}
               >
                 {" "}
+                <span className="absolute top-0 left-0 scale-0">{`visit the ${link}'s page`}</span>
               </div>
             </Link>
           </li>
